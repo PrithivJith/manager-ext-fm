@@ -74,6 +74,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 header {
@@ -213,7 +214,10 @@ input[type="checkbox"]:checked::after {
 #extension-container {
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
+  margin-bottom: 100px;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  ;
 }
 
 .extension-content {
