@@ -3,7 +3,7 @@
 :root {
   --shadow: hsl(216, 7%, 80%);
   --title-font: hsl(226, 25%, 17%);
-  --bg-grad-1: #EBF2FC;
+  --bg-grad-1: hsl(215, 74%, 85%);
   --bg-grad-2: #EEF8F9;
   --filter-col: hsl(3, 77%, 44%);
   --check-col: hsl(3, 71%, 46%);
