@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --shadow: hsl(216, 7%, 80%);
+  --title-font: hsl(226, 25%, 17%);
+  --bg-grad-1: #EBF2FC;
+  --bg-grad-2: #EEF8F9;
+  --filter-col: hsl(3, 77%, 44%);
+  --check-col: hsl(3, 71%, 46%);
+  --button-bg: hsl(200, 100%, 99%);
+  --othershadow: hsl(216, 7%, 80%);
+  --button-bord: hsl(216, 7%, 80%);
+  --pcol: hsl(226, 11%, 37%);
+  --headcol: hsl(220, 100%, 99%);
+  --remhov: hsl(3, 71%, 56%);
+  --theme-col: hsl(0, 0%, 93%);
+  --theme-hov: hsl(0, 0%, 78%);
+  --check-incol: hsl(0, 0%, 78%);
+  --focus: hsl(5, 63%, 54%);
+
+}
+
+.darkmode {
+  --bg-grad-1: #040918;
+  --bg-grad-2: #091540;
+  --filter-col: hsl(3, 86%, 64%);
+  --check-col: hsl(3, 86%, 64%);
+  --check-incol: hsl(230, 9%, 38%);
+  --shadow: rgba(0, 0, 0, 0);
+  --title-font: white;
+  --button-bg: hsl(227, 20%, 17%);
+  --button-bord: hsl(216, 7%, 40%);
+  --pcol: hsl(226, 11%, 67%);
+  --headcol: hsl(227, 22%, 17%);
+  --remhov: hsl(227, 10%, 37%);
+  --theme-col: hsl(228, 20%, 24%);
+  --theme-hov: hsl(227, 10%, 37%);
+}
+
+input:focus,
+button:focus {
+  outline: 2px solid var(--focus)
+}
+
+* {
+  font-family: "Noto Sans";
+}
+
+.bg-img {
+  background: linear-gradient(180deg, var(--bg-grad-1) 0%, var(--bg-grad-2) 100%);
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--headcol);
+  box-shadow: 0px 2px 2px 1px var(--shadow);
+}
+
+#theme-button {
+  border-style: none;
+  background-color: var(--theme-col);
+  padding: 10px;
+  border-radius: 10px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#theme-button:hover {
+  background-color: var(--theme-hov);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--title-font);
+}
+
+.title-bar h1 {
+  width: fit-content;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked+label {
+  background-color: var(--filter-col);
+  border-color: var(--filter-col);
+  color: white;
+
+}
+
+h2 {
+  font-size: 29px;
+}
+
+.filter-button {
+  background-color: var(--button-bg);
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--button-bord);
+  color: var(--title-font);
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  appearance: none;
+  background-color: var(--check-incol);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 50ms;
+}
+
+input[type="checkbox"]::after {
+  background-color: white;
+  position: absolute;
+  padding: 8px;
+  top: 10%;
+  left: 7%;
+  cursor: pointer;
+  border-radius: 100px;
+  content: ' ';
+  transition: left 50ms;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--check-col);
+
+}
+
+input[type="checkbox"]:checked::after {
+  left: 53%;
+}
+
+.extension-box {
+  background-color: var(--button-bg);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px var(--othershadow);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+#extension-container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-bottom: 100px;
+  gap: 10px;
+}
+
+.extension-content {
+  display: flex;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.extension-content img {
+  margin-right: 10px;
+  width: 45px;
+}
+
+.desc h3 {
+  margin: 0;
+}
+
+.desc p {
+  font-size: 14px;
+  margin: 5px 0 0 0;
+  color: var(--pcol);
+  font-weight: 500;
+}
+
+.remove-button {
+  padding: 8px 12px;
+  border: 1px solid;
+  background-color: var(--button-bg);
+  border-radius: 20px;
+  color: var(--title-font);
+  font-weight: 500;
+  border-color: var(--button-bord);
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: var(--remhov);
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actions input {
+  height: fit-content;
+}

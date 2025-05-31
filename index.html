@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="main.js" defer></script>
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-img"></div>
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Prithiv Jith Shiva Deep</a>.
+  </div> -->
+    <header>
+      <div class="header-bar">
+        <img
+          src="/browser-extensions-manager-ui-main/assets/images/logo.svg"
+          alt="logo"
+          id="logo"
+        />
+        <button id="theme-button">
+          <img
+            src="/browser-extensions-manager-ui-main/assets//images/icon-moon.svg"
+            width="20px"
+            height="20px"
+            alt="theme image"
+            id="themeimg"
+          />
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <div class="title-bar">
+        <h2>Extension List</h2>
+        <div class="filters">
+          <input
+            type="radio"
+            name="filters"
+            id="all"
+            checked
+            value="All"
+          /><label class="filter-button" for="all">All</label>
+          <input type="radio" name="filters" id="active" value="Active" /><label
+            class="filter-button"
+            for="active"
+            >Active</label
+          >
+          <input
+            type="radio"
+            name="filters"
+            id="inactive"
+            value="Inactive"
+          /><label class="filter-button" for="inactive">Inactive</label>
+        </div>
+      </div>
+      <div class="box">
+        <div id="extension-container"></div>
+      </div>
+    </main>
+  </body>
+</html>
