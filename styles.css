@@ -3,7 +3,7 @@
 :root {
   --shadow: hsl(216, 7%, 80%);
   --title-font: hsl(226, 25%, 17%);
-  --bg-grad-1: hsl(215, 74%, 85%);
+  --bg-grad-1: hsl(215, 74%, 92%);
   --bg-grad-2: #EEF8F9;
   --filter-col: hsl(3, 77%, 44%);
   --check-col: hsl(3, 71%, 46%);
@@ -198,25 +198,21 @@ input[type="checkbox"]:checked::after {
   padding: 15px;
   border-radius: 20px;
   box-shadow: 0px 0px 3px var(--othershadow);
-  width: 300px;
+  min-width: 300px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 5px;
 
 }
 
-.box {
-  display: flex;
-  justify-content: center;
-}
+
 
 #extension-container {
   width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  margin-bottom: 100px;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
 }
 
 .extension-content {
